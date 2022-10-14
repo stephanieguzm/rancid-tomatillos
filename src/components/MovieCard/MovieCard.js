@@ -3,19 +3,20 @@ import './MovieCard.css'
 
 const MovieCard = (props) => {
     
-    const handleClick = (event) => {
-        event.preventDefault();
-        console.log('this movie!', event.target.value)
-        // this.props.findSelectedMovie(event.target.value)
-    //this method will call on a method within the App class and pass through the movie selection (event.target.value)
-    }
+    // const handleClick = (event) => {
+    //     event.preventDefault();
+    //     // console.log('this movie!', event.target.value)
+    //     props.findSelectedMovie(event.target.value)
+    // //this method will call on a method within the App class and pass through the movie selection (event.target.value)
+    // }
+    // console.log('card props', props)
 
     return (
-        <div className='movie-card' value={props.id}>
+        <div className='movie-card' id={props.id} onClick={() => this.handleClick()}>
             <img src={props.posterImg} className='card-img'/>
             <h3>{props.title}</h3>
             <p>🍅 {props.rating}</p>
-            <button type='button' value={props.id} onClick={(event) => handleClick(event)}>click</button>
+            {/* <button type='button' value={props.id} onClick={() => props.handleClick()}>click</button> */}
         </div>
     )
 }

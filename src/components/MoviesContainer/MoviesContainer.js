@@ -3,7 +3,7 @@ import MovieCard from '../MovieCard/MovieCard'
 import './MoviesContainer.css'
 
 const MoviesContainer = (props) => {
-   
+//    console.log(props)
     const movieCards = props.movies.map(movie => {
         return (
             <MovieCard 
@@ -12,6 +12,7 @@ const MoviesContainer = (props) => {
                 rating={movie.average_rating.toFixed(1)}
                 key={movie.id}
                 id={movie.id}
+                onClick={() => this.handleClick()}
             />
         )
     })
