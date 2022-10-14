@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
-import { render } from 'react-dom'
+import MoviesContainer from '../MoviesContainer/MoviesContainer'
+import './App.css'
+import movieData from '../../movieData'
+
 
 class App extends Component {
   constructor() {
     super()
+    this.state = { movies: movieData.movies}
   }
 
 
@@ -11,7 +15,8 @@ class App extends Component {
     return (
       <div>
         <h1>Hello</h1>
-      <div/>
+        <MoviesContainer movies={this.state.movies}/>
+      </div>
     )
   }
 }
