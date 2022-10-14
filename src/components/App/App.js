@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MoviesContainer from '../MoviesContainer/MoviesContainer'
+import MovieCard from '../MovieCard/MovieCard'
 import './App.css'
 import movieData from '../../movieData'
 
@@ -9,7 +10,6 @@ class App extends Component {
     super()
     this.state = { movies: movieData.movies}
   }
-
 
   render() {
     return (

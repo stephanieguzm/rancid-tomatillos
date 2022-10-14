@@ -11,6 +11,7 @@ const MoviesContainer = (props) => {
                 title={movie.title}
                 rating={movie.average_rating.toFixed(1)}
                 key={movie.id}
+                id={movie.id}
             />
         )
     })
