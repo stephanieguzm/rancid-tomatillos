@@ -5,9 +5,9 @@ const MovieCard = (props) => {
     console.log(props)
     return (
         <div className='movie-card'>
-            <img src={props.backDropImg} />
+            <img src={props.posterImg} className='card-img' />
             <h3>{props.title}</h3>
-            <p>{props.rating}</p>
+            <p>🍅 {props.rating}</p>
             <button>click</button>
 
         </div>

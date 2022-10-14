@@ -7,9 +7,9 @@ const MoviesContainer = (props) => {
     const movieCards = props.movies.map(movie => {
         return (
             <MovieCard 
-                backDropImg={movie.backdrop_path}
+                posterImg={movie.poster_path}
                 title={movie.title}
-                rating={movie.average_rating}
+                rating={movie.average_rating.toFixed(1)}
                 key={movie.id}
             />
         )
