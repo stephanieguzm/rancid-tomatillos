@@ -3,6 +3,7 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import MovieCard from '../MovieCard/MovieCard'
 import './App.css'
 import movieData from '../../movieData'
+import Navbar from '../Navbar/Navbar'
 
 
 class App extends Component {
@@ -27,8 +28,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Rancid Tomatillos</h1>
-        <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/>
+        {/* <h1 className='header'>Rancid Tomatillos</h1> */}
+        <Navbar />
+        <MoviesContainer movies={this.state.movies}/>
       </div>
     )
   }
