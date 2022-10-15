@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import './App.css'
 import movieData from '../../movieData'
+import Navbar from '../Navbar/Navbar'
 
 
 class App extends Component {
@@ -18,7 +19,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 className='header'>Rancid Tomatillos</h1>
+        {/* <h1 className='header'>Rancid Tomatillos</h1> */}
+        <Navbar />
         <MoviesContainer movies={this.state.movies}/>
       </div>
     )

@@ -1,0 +1,33 @@
+.navBar {
+    display: flex;
+    margin: 3em;
+    background-color: black;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+
+  .logo {
+    height: 10%;
+    width: 50%;
+  }
+
+
+.home-button {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.home-button:hover {
+    cursor: pointer;
+    background-color: #f7f7f7;
+  }
