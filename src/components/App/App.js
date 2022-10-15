@@ -11,10 +11,9 @@ class App extends Component {
     this.state = { movies: movieData.movies}
   }
 
-  handleClick = (event) => {
-        event.preventDefault();
-        console.log('this movie!', event.target.id)
-        this.findSelectedMovie(event)
+  handleClick = (id) => {
+        console.log('id!', id)
+        // this.findSelectedMovie(event)
     //this method will call on a method within the App class and pass through the movie selection (event.target.value)
   }
 
