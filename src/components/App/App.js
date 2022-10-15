@@ -4,12 +4,15 @@ import MovieCard from '../MovieCard/MovieCard'
 import './App.css'
 import movieData from '../../movieData'
 import Navbar from '../Navbar/Navbar'
+import IndividualMovie from '../IndividualMovie/IndividualMovie'
 
 
 class App extends Component {
   constructor() {
     super()
-    this.state = { movies: movieData.movies, selectedMovie: {}}
+    this.state = { movies: movieData.movies, 
+      // selectedMovie: {}
+  }
   }
 
   handleClick = (id) => {
@@ -22,7 +25,8 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/>
+        {!this.state.selectedMovie && <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/>}
+        {this.state.selectedMovie && <IndividualMovie selectedMovie={this.state.selectedMovie}/>}
       </div>
     )
   }
