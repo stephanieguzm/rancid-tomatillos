@@ -1,13 +1,13 @@
 import React from 'react'
-import './Navbar.css'
 import RancidLogo from '../../assets/RancidLogo.png'
+import './Navbar.css'
 
 const Navbar = (props) => {
-    console.log('Navbar', props)
-    return(
+    return (
         <div className='navBar'>
             <img className='logo' src={RancidLogo} />
-            {<button className='home-button'>home</button>}
+            {props.selectedMovie && 
+                <button onClick={(event) => props.returnHome(event)} className='home-button'>home</button>}
         </div>
     )
 }
