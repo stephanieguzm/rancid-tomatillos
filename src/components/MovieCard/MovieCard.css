@@ -9,4 +9,29 @@
   height: auto
 }
 
+.movie-card:hover {
+  animation: pop 0.3s linear 1;
+  display:inline-block;
+  margin:0.4em;  padding:1em;
+  transform: scale(1);
+  transition: all .75s ease-in-out;
+}
+
+.titles {
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: white;
+}
+
+.ratings {
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
 

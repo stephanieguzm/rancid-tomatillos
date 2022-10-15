@@ -10,11 +10,15 @@ class App extends Component {
     this.state = { movies: movieData.movies}
   }
 
+  // handleClick = (id) => {
+  //   const selectedMovie = this.state.movies.find(movie => movie.id === id)
+  // }
+
 
   render() {
     return (
       <div>
-        <h1>Rancid Tomatillos</h1>
+        <h1 className='header'>Rancid Tomatillos</h1>
         <MoviesContainer movies={this.state.movies}/>
       </div>
     )

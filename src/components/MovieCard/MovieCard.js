@@ -6,10 +6,9 @@ const MovieCard = (props) => {
     return (
         <div className='movie-card'>
             <img src={props.posterImg} className='card-img' />
-            <h3>{props.title}</h3>
-            <p>🍅 {props.rating}</p>
+            <h3 className='titles'>{props.title}</h3>
+            <p className='ratings'>🍅 {props.rating}</p>
             <button>click</button>
-
         </div>
     )
 }
