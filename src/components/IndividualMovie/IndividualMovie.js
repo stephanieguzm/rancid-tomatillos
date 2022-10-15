@@ -5,10 +5,10 @@ const IndividualMovie = (props) => {
   console.log('individualMovie', props.selectedMovie)
   return (
     <section className='individual-movie' id={props.selectedMovie.id}>
-      <img src={props.selectedMovie.backdrop_path}/>
-      <h1>{props.selectedMovie.title}</h1>
-      <p>{props.selectedMovie.average_rating}</p>
-      <p>{props.selectedMovie.release_date}</p>
+      <img className='individual-movie-img' alt={props.selectedMovie.title} src={props.selectedMovie.backdrop_path}/>
+      <h1 className='individual-movie-title'>{props.selectedMovie.title}</h1>
+      <p className='individual-movie-text'>{props.selectedMovie.average_rating}</p>
+      <p className='individual-movie-text'>{props.selectedMovie.release_date}</p>
     </section>
   )
 }
