@@ -2,11 +2,12 @@ import React from 'react'
 import './Navbar.css'
 import RancidLogo from '../../assets/RancidLogo.png'
 
-const Navbar = () => {
+const Navbar = (props) => {
+    console.log('Navbar', props)
     return(
         <div className='navBar'>
             <img className='logo' src={RancidLogo} />
-            <button className='home-button'>home</button> 
+            {<button className='home-button'>home</button>}
         </div>
     )
 }
