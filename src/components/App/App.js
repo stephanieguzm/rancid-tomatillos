@@ -14,7 +14,7 @@ class App extends Component {
       
   handleClick = (event) => {
         event.preventDefault();
-        // console.log('this movie!', event.target.value)
+        console.log('this movie!', event.target.id)
         this.findSelectedMovie(event)
     //this method will call on a method within the App class and pass through the movie selection (event.target.value)
     }
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div>
         <h1>Rancid Tomatillos</h1>
-        <MoviesContainer movies={this.state.movies} onClick={this.handleClick}/>
+        <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/>
       </div>
     )
   }

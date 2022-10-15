@@ -12,7 +12,7 @@ const MoviesContainer = (props) => {
                 rating={movie.average_rating.toFixed(1)}
                 key={movie.id}
                 id={movie.id}
-                onClick={() => this.handleClick()}
+                handleClick={props.handleClick}
             />
         )
     })
