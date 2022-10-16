@@ -5,14 +5,25 @@
 }
 
 .individual-movie-img {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 80%;
   height: auto;
+  margin-left: 10%;
 }
 
 .individual-movie-title {
+  display: flex;
+  justify-content: center;
   color: white;
+  font-weight: bolder;
+  font-size: xx-large;
 }
 
 .individual-movie-text {
+  display: flex;
+  justify-content: center;
   color: white;
+  font-weight: bolder;
+  font-size: large;
 }
