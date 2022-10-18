@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Route, NavLink } from 'react-router-dom'
 import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import Navbar from '../Navbar/Navbar'
 import IndividualMovie from '../IndividualMovie/IndividualMovie'
@@ -9,9 +10,10 @@ class App extends Component {
     super()
     this.state = { 
       movies: [], 
-      selectedMovie: null,
+      selectedMovie: {},
       error: '',
-      isLoading: true
+      isLoading: true,
+      isHome: true
      }
   }
 
@@ -28,6 +30,7 @@ class App extends Component {
   }
 
   handleClick = (id) => {
+    this.setState({ isHome: false })
     const userSelectedMovie = this.state.movies.find(movie => movie.id === id)
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2//movies/${userSelectedMovie.id}`)
       .then( response=> {
@@ -41,23 +44,25 @@ class App extends Component {
   }
 
   returnHome = () => {
-    this.setState({ selectedMovie: null })
+    this.setState({ selectedMovie: {}, isHome: true })
   }
 
   render() {
     return (
       <div>
-        <Navbar selectedMovie={this.state.selectedMovie} returnHome={this.returnHome}/>
+    
+        <Navbar selectedMovie={this.state.selectedMovie} returnHome={this.returnHome} isHome={this.state.isHome}/>
+     
         {this.state.isLoading && 
           <h2>Page is Loading...</h2>
           // <img />
         }
         {this.state.error && 
           <h2 className='error-text'>There was an error: {this.state.error}. Movies cannot load. Please try again.</h2>}
-        {!this.state.selectedMovie && <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/>}
-        {this.state.selectedMovie && 
-        <IndividualMovie selectedMovie={this.state.selectedMovie}/>
-        }
+        <Route exact path='/'
+          render={() => <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/> } />
+        <Route exact path='/:id' 
+          render={() => <IndividualMovie selectedMovie={this.state.selectedMovie}/>}  />
       </div>
     )
   }
