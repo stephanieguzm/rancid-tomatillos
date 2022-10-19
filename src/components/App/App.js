@@ -30,6 +30,7 @@ class App extends Component {
   }
 
   handleClick = (id) => {
+    console.log('id', id)
     this.setState({ isHome: false })
     const userSelectedMovie = this.state.movies.find(movie => movie.id === id)
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2//movies/${userSelectedMovie.id}`)
@@ -67,5 +68,6 @@ class App extends Component {
     )
   }
 }
+
 
 export default App

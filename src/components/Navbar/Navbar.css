@@ -14,8 +14,13 @@
   .logo {
     display: flex;
     justify-content: center;
-    height: 30%;
-    width: 60%;
+    width: 40%;
+    height: auto;
+  }
+
+  a.active {
+    width: auto;
+    height: 20%;
   }
 
 
@@ -25,9 +30,10 @@
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     border-radius: 4px;
+    margin-top: 90%;
+  
   }
 
 .home-button:hover {
