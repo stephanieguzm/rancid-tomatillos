@@ -1,11 +1,15 @@
 describe('As a user, when I load the application, I can see a collection of movies', () => {
 
   beforeEach(() => {
+    //intercept on page load w/stub.  return card data
+    //refrence a dummy data file
+    //stubbing is returned w/dummy data
     cy.visit('http://localhost:3000/')
   })
 
   it.skip('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
     cy.get('.error-text').should('contain','Movies cannot load. Please try again' )
+    //intercept w/stub (return code 500)
     // intercept? 
     //200 if you get movies back
   })
