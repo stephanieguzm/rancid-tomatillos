@@ -7,6 +7,7 @@ describe('As a user, when I load the application, I can see a collection of movi
   it.skip('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
     cy.get('.error-text').should('contain','Movies cannot load. Please try again' )
     // intercept? 
+    //200 if you get movies back
   })
 
   it('should display all movies each with a title, movie poster, and rating', () => {
