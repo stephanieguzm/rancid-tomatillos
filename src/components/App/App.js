@@ -45,7 +45,9 @@ class App extends Component {
   }
 
   returnHome = () => {
-    this.setState({ selectedMovie: {}, isHome: true })
+    this.setState({ 
+      // selectedMovie: {}, 
+      isHome: true })
   }
 
   render() {
@@ -59,7 +61,7 @@ class App extends Component {
           // <img />
         }
         {this.state.error && 
-          <h2 className='error-text'>There was an error: {this.state.error}. Movies cannot load. Please try again.</h2>}
+          <h2 className='error-text'>{this.state.error}Movies cannot load. Please try again.</h2>}
         <Route exact path='/'
           render={() => <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/> } />
         <Route exact path='/:id' 
