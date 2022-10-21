@@ -19,7 +19,7 @@ class IndividualMovie extends Component {
         return response.json() 
       })
       .then( data => this.setState({ selectedMovie: data.movie }))
-      // .catch( error => this.setState({ error: error.message }))
+      .catch( error => this.setState({ error: error.message }))
   }
 
   // const formatDate = props.selectedMovie.release_date.split('-', 1)
@@ -33,7 +33,6 @@ class IndividualMovie extends Component {
           <img className='individual-movie-img' alt={movie.title} src={movie.backdrop_path}/>
           <p className='individual-movie-text'>{movie.overview}</p> 
           <p className='individual-movie-text'>{movie.genres} | {movie.runtime} minutes | </p>
-          <p className='individual-movie-text'>Genre: {movie.genres}</p>
         </section>
       </div>
     )

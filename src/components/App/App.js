@@ -32,7 +32,6 @@ class App extends Component {
   handleClick = (id) => {
     console.log('id', id)
     this.setState({ isHome: false })
-    // const userSelectedMovie = this.state.movies.find(movie => movie.id === id)
   }
 
   returnHome = () => {
@@ -57,7 +56,7 @@ class App extends Component {
           path='/:id'
           render={({ match }) => {
             const matchId = match.params.id
-            // this.state.movies.find(movie => movie.id === parseInt(matchId))
+            console.log('matchId', matchId)
             return <IndividualMovie selectedMovie={matchId} />
           }
         }/>
