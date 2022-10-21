@@ -23,8 +23,10 @@ class IndividualMovie extends Component {
   }
   
   render() {
-    // const formatDate = Number(this.props.selectedMovie.release_date).split('-', 1)
     const movie = this.state.selectedMovie
+    const year = String(movie.release_date).split('-', 1)[0]
+    const genres = String(movie.genres).split(',').join(', ')
+
     return (
       <div>
         <section className='individual-movie' id={movie.id}>
@@ -32,12 +34,15 @@ class IndividualMovie extends Component {
           <p className='individual-movie-text'>{movie.tagline}</p>
           <img className='individual-movie-img' alt={movie.title} src={movie.backdrop_path}/>
           <p className='individual-movie-text'>{movie.overview}</p> 
-          <p className='individual-movie-text'>{movie.genres} | {movie.runtime} minutes |  </p>
+          <p className='individual-movie-text'>{genres}  |  {movie.runtime} minutes  |  {year} </p>
         </section>
       </div>
     )
   }
 }
+
+
+
 
 export default IndividualMovie
 
