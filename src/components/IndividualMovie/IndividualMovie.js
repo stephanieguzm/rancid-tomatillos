@@ -1,20 +1,43 @@
-import React from "react"
+import React, { Component } from "react"
 import './IndividualMovie.css'
 
-const IndividualMovie = (props) => {
-  
-  // const formatDate = props.selectedMovie.release_date.split('-', 1)
+class IndividualMovie extends Component {
+  constructor() {
+    super()
+    this.state = {
+      selectedMovie: {},
+      error: ''
+    }
+  }
 
-  return (
-    <section className='individual-movie' id={props.selectedMovie.id}>
-      <h1 className='individual-movie-title'>{props.selectedMovie.title}</h1>
-      <p className='individual-movie-text'>{props.selectedMovie.tagline}</p>
-      <img className='individual-movie-img' alt={props.selectedMovie.title} src={props.selectedMovie.backdrop_path}/>
-      <p className='individual-movie-text'>{props.selectedMovie.overview}</p> 
-      <p className='individual-movie-text'>{props.selectedMovie.genres} | {props.selectedMovie.runtime} minutes | </p>
-      <p className='individual-movie-text'>Genre: {props.selectedMovie.genres}</p>
-    </section>
-  )
+  componentDidMount() {
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2//movies/${this.props.selectedMovie}`)
+      .then( response=> {
+        if (!response.ok) {
+          throw new Error()
+        }
+        return response.json() 
+      })
+      .then( data => this.setState({ selectedMovie: data.movie }))
+      // .catch( error => this.setState({ error: error.message }))
+  }
+
+  // const formatDate = props.selectedMovie.release_date.split('-', 1)
+  render() {
+    const movie = this.state.selectedMovie
+    return (
+      <div>
+        <section className='individual-movie' id={movie.id}>
+          <h1 className='individual-movie-title'>{movie.title}</h1>
+          <p className='individual-movie-text'>{movie.tagline}</p>
+          <img className='individual-movie-img' alt={movie.title} src={movie.backdrop_path}/>
+          <p className='individual-movie-text'>{movie.overview}</p> 
+          <p className='individual-movie-text'>{movie.genres} | {movie.runtime} minutes | </p>
+          <p className='individual-movie-text'>Genre: {movie.genres}</p>
+        </section>
+      </div>
+    )
+  }
 }
 
 export default IndividualMovie
