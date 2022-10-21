@@ -13,7 +13,7 @@ class App extends Component {
       // selectedMovie: {},
       error: '',
       isLoading: true,
-      isHome: true
+      // isHome: true
      }
   }
 
@@ -29,23 +29,23 @@ class App extends Component {
       .catch( error => this.setState({ error: error.message }))
   }
 
-  handleClick = (id) => {
-    console.log('id', id)
-    this.setState({ isHome: false })
-  }
+  // handleClick = (id) => {
+  //   this.setState({ isHome: false })
+  // }
 
-  returnHome = () => {
-    this.setState({ 
-      isHome: true })
-  }
+  // returnHome = () => {
+  //   this.setState({ 
+  //     isHome: true })
+  // }
 
   render() {
     return (
       <div>
-        <Navbar returnHome={this.returnHome} isHome={this.state.isHome}/>
+        <Navbar 
+        // returnHome={this.returnHome} isHome={this.state.isHome}
+        />
      
-        {this.state.isLoading && 
-          <h2>Page is Loading...</h2>
+        {this.state.isLoading && <h2>Page is Loading...</h2>
           // <img />
         }
         {this.state.error && 
@@ -56,7 +56,6 @@ class App extends Component {
           path='/:id'
           render={({ match }) => {
             const matchId = match.params.id
-            console.log('matchId', matchId)
             return <IndividualMovie selectedMovie={matchId} />
           }
         }/>

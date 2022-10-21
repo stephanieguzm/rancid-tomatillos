@@ -9,21 +9,21 @@ class IndividualMovie extends Component {
       error: ''
     }
   }
-
+  
   componentDidMount() {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2//movies/${this.props.selectedMovie}`)
-      .then( response=> {
-        if (!response.ok) {
-          throw new Error()
-        }
-        return response.json() 
-      })
-      .then( data => this.setState({ selectedMovie: data.movie }))
-      .catch( error => this.setState({ error: error.message }))
+    .then( response=> {
+      if (!response.ok) {
+        throw new Error()
+      }
+      return response.json() 
+    })
+    .then( data => this.setState({ selectedMovie: data.movie }))
+    .catch( error => this.setState({ error: error.message }))
   }
-
-  // const formatDate = props.selectedMovie.release_date.split('-', 1)
+  
   render() {
+    // const formatDate = Number(this.props.selectedMovie.release_date).split('-', 1)
     const movie = this.state.selectedMovie
     return (
       <div>
@@ -32,7 +32,7 @@ class IndividualMovie extends Component {
           <p className='individual-movie-text'>{movie.tagline}</p>
           <img className='individual-movie-img' alt={movie.title} src={movie.backdrop_path}/>
           <p className='individual-movie-text'>{movie.overview}</p> 
-          <p className='individual-movie-text'>{movie.genres} | {movie.runtime} minutes | </p>
+          <p className='individual-movie-text'>{movie.genres} | {movie.runtime} minutes |  </p>
         </section>
       </div>
     )
