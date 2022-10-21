@@ -1,49 +1,63 @@
 describe('As a user, when I click on a movie, I am shown additional details about that movie', () => {
 
-  beforeEach(() => {
-    // cy
-    // .visit('http://localhost:3000')
-    // .get('[id="694919"]')
-    // .click()
-    // .visit('http://localhost:3000/694919')
-
-    cy.fixture('movie.json').then((movie) => {
-      cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2//movies/694919', movie)
-      cy.visit('http://localhost:3000/').wait(1000)
+beforeEach(() => {
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/', {
+      fixture: 'allMovies.json'
     })
-
+    cy.visit('http://localhost:3000/').wait(2000)
   })
 
   it('should display an error message (500 status code) if the individual movie is unable to render', () => {
     cy
-     .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2//movies/694919', 
+     .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/581392', 
      {statusCode: 500, body: {message: `Movies cannot load. Please try again.` }})
   })
-  
-  it('should display the navbar with the application logo and home button', () => {
-      cy
-       .get('.navBar').should('exist')
-       .get('.logo').should('exist')
-    
-  })
 
-  it.skip('should render all the details about the movie they clicked on', () => {
+    it('should render all the details about the movie they clicked on', () => {
     cy
-      .url().should('include', '/694919')
+      .get('.movie-card').first().click()
+      .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919', {
+        fixture: 'movie1.json'
+      })
+      .visit('http://localhost:3000/694919').wait(5000)
+      .url().should('eq', 'http://localhost:3000/694919')
       .get('h1.individual-movie-title').contains("Money Plane")
-      .get('.individual-movie-img').should('have.attr', 'https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg')
-      .get('average_rating').contains('6.6')
-      .get('id').contains(694919)
-       //.get('.home-button').click()
-      
-
+      .get('.individual-movie-img').should('have.attr', 'src').should('include', 'https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg')
+      .get('.individual-movie-text').contains(`A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals.`)
+      .get('.individual-movie-text').contains('Action')
+      .get('.individual-movie-text').contains('82 minutes')
+      // .get('average_rating').contains('6.6')
   })
+
+
+  // it('should render all the details about the movie they clicked on', () => {
+  //   cy
+  //     .get('.movie-card').last().click()
+  //     .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/581392', {
+  //       fixture: 'movie2.json'
+  //     })
+  //     .visit('http://localhost:3000/581392').wait(2000)
+  //     .url().should('eq', 'http://localhost:3000/581392')
+  //     .get('h1.individual-movie-title').contains("Peninsula")
+  //     .get('.individual-movie-img').should('have.attr', 'src').should('include', 'https://image.tmdb.org/t/p/original//gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg')
+  //     .get('.individual-movie-text').contains(`A soldier and his team battle hordes of post-apocalyptic zombies in the wastelands of the Korean Peninsula.`)
+  //     .get('.individual-movie-text').contains('ActionHorrorThriller')
+  //     .get('.individual-movie-text').contains('114 minutes')
+  //     // .get('average_rating').contains('6.6')
+  // })
+
+
 
   it.skip('should no longer display the dashboard that displays all the movies', () => {
     // ('not.exist')
   })
   
-  
+    it('should display the navbar with the application logo and home button', () => {
+      cy
+       .get('.navBar').should('exist')
+       .get('.logo').should('exist')
+    
+  })
   
   
 })
@@ -54,7 +68,7 @@ describe('As a user, when I click on a movie, I am shown additional details abou
 
 
 
- 
+ //be able to click the home button OR the logo to return to the home view
 
 //   - [ ] As a user, I will see a displayed error message (500 status code) if the individual movie is unable to render
 
