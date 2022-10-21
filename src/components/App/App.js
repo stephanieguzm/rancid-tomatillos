@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, NavLink } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import Navbar from '../Navbar/Navbar'
 import IndividualMovie from '../IndividualMovie/IndividualMovie'
@@ -10,7 +10,7 @@ class App extends Component {
     super()
     this.state = { 
       movies: [], 
-      selectedMovie: {},
+      // selectedMovie: {},
       error: '',
       isLoading: true,
       isHome: true
@@ -32,29 +32,18 @@ class App extends Component {
   handleClick = (id) => {
     console.log('id', id)
     this.setState({ isHome: false })
-    const userSelectedMovie = this.state.movies.find(movie => movie.id === id)
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2//movies/${userSelectedMovie.id}`)
-      .then( response=> {
-        if (!response.ok) {
-          throw new Error()
-        }
-        return response.json() 
-      })
-      .then( data => this.setState({ selectedMovie: data.movie }))
-      .catch( error => this.setState({ error: error.message }))
+    // const userSelectedMovie = this.state.movies.find(movie => movie.id === id)
   }
 
   returnHome = () => {
     this.setState({ 
-      // selectedMovie: {}, 
       isHome: true })
   }
 
   render() {
     return (
       <div>
-    
-        <Navbar selectedMovie={this.state.selectedMovie} returnHome={this.returnHome} isHome={this.state.isHome}/>
+        <Navbar returnHome={this.returnHome} isHome={this.state.isHome}/>
      
         {this.state.isLoading && 
           <h2>Page is Loading...</h2>
@@ -64,8 +53,14 @@ class App extends Component {
           <h2 className='error-text'>{this.state.error}Movies cannot load. Please try again.</h2>}
         <Route exact path='/'
           render={() => <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/> } />
-        <Route exact path='/:id' 
-          render={() => <IndividualMovie selectedMovie={this.state.selectedMovie}/>}  />
+        <Route exact 
+          path='/:id'
+          render={({ match }) => {
+            const matchId = match.params.id
+            // this.state.movies.find(movie => movie.id === parseInt(matchId))
+            return <IndividualMovie selectedMovie={matchId} />
+          }
+        }/>
       </div>
     )
   }
