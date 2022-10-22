@@ -7,8 +7,7 @@ const MovieCard = (props) => {
   return (
     <Link to={`/${props.id}`}>
       <div className='movie-card' id={props.id} >
-        {/* onClick={() => props.handleClick(props.id)} */}
-				<img src={props.posterImg} alt={`${props.title}moviePoster`} className='card-img' />
+				<img src={props.posterImg} alt={`${props.title} moviePoster`} className='card-img' />
 				<h3 className='titles'>{props.title}</h3>
 				<div className='rating-container'>
 					<img className='tomatillo-image' src={tomatillo} /> 

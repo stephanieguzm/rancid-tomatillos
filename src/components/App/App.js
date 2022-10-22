@@ -10,10 +10,8 @@ class App extends Component {
     super()
     this.state = { 
       movies: [], 
-      // selectedMovie: {},
       error: '',
       isLoading: true,
-      // isHome: true
      }
   }
 
@@ -29,21 +27,10 @@ class App extends Component {
       .catch( error => this.setState({ error: error.message }))
   }
 
-  // handleClick = (id) => {
-  //   this.setState({ isHome: false })
-  // }
-
-  // returnHome = () => {
-  //   this.setState({ 
-  //     isHome: true })
-  // }
-
   render() {
     return (
       <div>
-        <Navbar 
-        // returnHome={this.returnHome} isHome={this.state.isHome}
-        />
+        <Navbar />
      
         {this.state.isLoading && <h2>Page is Loading...</h2>
           // <img />

@@ -5,6 +5,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 
 const Navbar = () => {
+  
   const location = useLocation()
   console.log(location)
   const hasNumber = /\d/
