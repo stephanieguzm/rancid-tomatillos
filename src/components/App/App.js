@@ -36,7 +36,7 @@ class App extends Component {
           // <img />
         }
         {this.state.error && 
-          <h2 className='error-text'>{this.state.error}Movies cannot load. Please try again.</h2>}
+          <h2 className='error-text'>{this.state.error}You didn't break the internet, but we can't find what you are looking for...Please try again later.</h2>}
         <Route exact path='/'
           render={() => <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/> } />
         <Route exact 
@@ -53,3 +53,6 @@ class App extends Component {
 
 
 export default App
+
+//1: this.state.error --> use conditional rendering OR use route paths
+//2: pass the new state down
