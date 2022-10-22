@@ -48,7 +48,7 @@ beforeEach(() => {
   })
 
 
-  it('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
+  it.skip('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
     cy.get('.movie-card').first().click()
     .visit('http://localhost:3000/694919').wait(2000)
     .url().should('eq', 'http://localhost:3000/694919')
