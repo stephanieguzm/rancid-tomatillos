@@ -1,17 +1,19 @@
 import React, { Component } from "react"
 import './IndividualMovie.css'
+import { Redirect, Route } from 'react-router-dom'
+import Error from '../Error/Error'
 
 class IndividualMovie extends Component {
   constructor() {
     super()
     this.state = {
       selectedMovie: {},
-      error: ''
+      hasError: false
     }
   }
   
   componentDidMount() {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2//movies/${this.props.selectedMovie}`)
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movie/${this.props.selectedMovie}`)
     .then( response=> {
       if (!response.ok) {
         throw new Error()
@@ -19,7 +21,11 @@ class IndividualMovie extends Component {
       return response.json() 
     })
     .then( data => this.setState({ selectedMovie: data.movie }))
-    .catch( error => this.setState({ error: error.message }))
+      .catch( error => {
+        if (error) {
+          this.setState({ hasError: true })
+        }
+      })
   }
   
   render() {
@@ -29,13 +35,14 @@ class IndividualMovie extends Component {
 
     return (
       <div>
-        <section className='individual-movie' id={movie.id}>
+        {this.state.hasError && <Route exact path='/error' render={()=> <Error />}/>}  
+        {movie && <section className='individual-movie' id={movie.id}>
           <h1 className='individual-movie-title'>{movie.title}</h1>
           <p className='individual-movie-text'>{movie.tagline}</p>
           <img className='individual-movie-img' alt={movie.title} src={movie.backdrop_path}/>
           <p className='individual-movie-text'>{movie.overview}</p> 
           <p className='individual-movie-text'>{genres}  |  {movie.runtime} minutes  |  {year} </p>
-        </section>
+        </section>}
       </div>
     )
   }

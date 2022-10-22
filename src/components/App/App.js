@@ -4,14 +4,14 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import Navbar from '../Navbar/Navbar'
 import IndividualMovie from '../IndividualMovie/IndividualMovie'
 import './App.css'
+import Error from '../Error/Error'
 
 class App extends Component {
   constructor() {
     super()
     this.state = { 
       movies: [], 
-      error: '',
-      isLoading: true,
+      hasError: false,
      }
   }
 
@@ -23,29 +23,31 @@ class App extends Component {
         }
         return response.json() 
       })
-      .then( data => this.setState({ movies: data.movies, loading: false}))
-      .catch( error => this.setState({ error: error.message }))
+      .then( data => this.setState({ movies: data.movies, 
+      }))
+      .catch( error => {
+        if (error) {
+          this.setState({ hasError: true })
+        }
+      })
   }
 
   render() {
     return (
       <div>
         <Navbar />
-     
-        {this.state.isLoading && <h2>Page is Loading...</h2>
-          // <img />
-        }
-        {this.state.error && 
-          <h2 className='error-text'>{this.state.error}Movies cannot load. Please try again.</h2>}
+        {!this.state.movies.length && <h2>Page is Loading...</h2>}
+        {this.state.hasError && <Route exact path='/error'
+        render={()=> <Error />} />}
         <Route exact path='/'
-          render={() => <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/> } />
-        <Route exact 
+          render={() => <MoviesContainer movies={this.state.movies} /> } />
+        {!this.state.hasError && <Route exact 
           path='/:id'
           render={({ match }) => {
             const matchId = match.params.id
             return <IndividualMovie selectedMovie={matchId} />
           }
-        }/>
+        }/>}
       </div>
     )
   }
@@ -53,3 +55,5 @@ class App extends Component {
 
 
 export default App
+
+

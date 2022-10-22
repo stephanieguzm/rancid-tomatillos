@@ -33,7 +33,6 @@ beforeEach(() => {
     
   })
 
-
   it.skip('should not display details for an individual movie', () => {
     cy
       .url().should('eq', 'http://localhost:3000/')
@@ -42,7 +41,6 @@ beforeEach(() => {
       .get('.individual-movie-text').should('not.exist')
       .get('.individual-movie-img').should('not.exist')
   })
-
 
   it.skip('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
     cy.get('.movie-card').first().click()
@@ -54,8 +52,6 @@ beforeEach(() => {
     .url().should('eq', 'http://localhost:3000/694919')
   })
   
-
-
 })
 
 

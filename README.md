@@ -77,8 +77,9 @@ sguzman247@gmail.com |
 [Github](https://github.com/stephanieguzm) |
 [LinkedIn](https://www.linkedin.com/in/stephanie-guzman-sdsw/) |
 
-## Credit
-
+## Acknowledgments
+[youtube-shield]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white
+[![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
 
 
 

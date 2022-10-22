@@ -1,0 +1,33 @@
+* {
+  color: white;
+}
+
+.error-container {
+	display: flex;
+	flex-direction: column;
+	/* width: 80%;
+  height: auto; */
+}
+
+.error-type {
+
+}
+
+.error-text {
+
+}
+
+.error-image {
+	width: 50%;
+  height: auto;
+}
+
+.back-home-button {
+	background-color: red;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 4px;
+}
