@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import './IndividualMovie.css'
-import { Route } from 'react-router-dom'
+import { Redirect, Route } from 'react-router-dom'
 import Error from '../Error/Error'
 
 class IndividualMovie extends Component {
@@ -8,7 +8,7 @@ class IndividualMovie extends Component {
     super()
     this.state = {
       selectedMovie: {},
-      error: ''
+      hasError: false
     }
   }
   
@@ -21,7 +21,11 @@ class IndividualMovie extends Component {
       return response.json() 
     })
     .then( data => this.setState({ selectedMovie: data.movie }))
-    .catch( error => this.setState({ error: error.message }))
+      .catch( error => {
+        if (error) {
+          this.setState({ hasError: true })
+        }
+      })
   }
   
   render() {
@@ -31,10 +35,7 @@ class IndividualMovie extends Component {
 
     return (
       <div>
-        {this.state.error &&
-          <Route exact path='/error'
-          render={() => <Error />} />
-        }
+        {this.state.hasError && <Route exact path='/error' render={()=> <Error />}/>}  
         {movie && <section className='individual-movie' id={movie.id}>
           <h1 className='individual-movie-title'>{movie.title}</h1>
           <p className='individual-movie-text'>{movie.tagline}</p>
