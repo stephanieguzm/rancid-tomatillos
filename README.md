@@ -1,70 +1,87 @@
 # Rancid Tomatillos
+Let's get watchin'
+----------
+[Project Board with User Stories] (https://github.com/users/stephanieguzm/projects/2) |
+[Project WireFrame]
+[Component Architecture] (https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+for this project, the goal was to create a React application that allows users to browse through a collection of films and see what peaks their interest!  Users can click on a specific film and view a film details.  The user can use the functional back arrow or click the home button to return to the home page.
 
-## Available Scripts
+## Project Context
+We are students in the Front-End Program at [Turing School of Software and Design](https://frontend.turing.edu/). Rancid Tomatillos is our Mod 3 partner project that, which means we have been software developers for just about 5 months! 🙌 
 
-In the project directory, you can run:
+Learning Goals for this project included:      
+✔️ Gain competency with React fundamentals      
+✔️ Learn how to test React components & asynchronous JS using Cypress
+✔️ Refactor conditional rendering to create a multi page UX React Router 
+
+[Link to Project Description](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
+
+## Setup
+If you'd like to pull down the code to your local machine:
+- Make a copy of this repository by pressing the 'Fork' button in the upper right corner
+- Pull your copy of the repository down to your local machine:
+- On the remote repository's page, click the green 'Code' button, select SSH, and copy the URL
+- Run `git clone <copied URL>` in your command line
+- `cd` into the root directory
+- Run `npm install` in your command line to install the necessary dependencies
+- Do NOT run `npm audit fix --force`
+- Then type `npm start` . This runs the app in the development mode.
+- Open http://localhost:3000 to view it in your browser.
+- The browser should then deploy using a local host
+- Enjoy using Rancid Tomatillos!
+- NOTE: Make sure that you type Control + C in your terminal when you are done using the application. This ensure the server will stop running before your close your Terminal.
+- Start the server to see the local site `npm start`
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
+![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) |
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+- Semantic HTML
+- Fetch API
 
-### `npm test`
+## Future Features
+- Add search bar or dropdown to have ability to search a movie by its Title
+- Allow a user to search movies by genres on the main page 
+- Ability for a user to add their own rating to a movie
+- Responsive design to allow for better UX/UI on mobile devices
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dev Notes
+### Wins
+- Fully functional, interactive page
+- Excellent group dynamic and communication
+- Smooth git workflow
 
-### `npm run build`
+### Challenges
+-
+-
+-
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dev Contacts
+Morgan Berry |
+Morganlyn.berry@gmail.com |
+[Github](https://github.com/Mlberry0205) |
+[LinkedIn](https://www.linkedin.com/in/morgan-lyn-berry/) |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Stephanie Guzman |
+sguzman247@gmail.com |
+[Github](https://github.com/stephanieguzm) |
+[LinkedIn](https://www.linkedin.com/in/stephanie-guzman-sdsw/) |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credit
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
