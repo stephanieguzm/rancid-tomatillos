@@ -1,4 +1,15 @@
-/* .error-type {
+* {
+  color: white;
+}
+
+.error-container {
+	display: flex;
+	flex-direction: column;
+	/* width: 80%;
+  height: auto; */
+}
+
+.error-type {
 
 }
 
@@ -7,10 +18,11 @@
 }
 
 .error-image {
+	width: 50%;
+  height: auto;
+}
 
-} */
-
-.home-button {
+.back-home-button {
 	background-color: red;
 	border: none;
 	color: white;
@@ -18,5 +30,4 @@
 	text-decoration: none;
 	font-size: 16px;
 	border-radius: 4px;
-	margin-top: 90%; 
 }

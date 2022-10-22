@@ -4,6 +4,7 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import Navbar from '../Navbar/Navbar'
 import IndividualMovie from '../IndividualMovie/IndividualMovie'
 import './App.css'
+import Error from '../Error/Error'
 
 class App extends Component {
   constructor() {
@@ -16,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movie')
       .then( response=> {
         if (!response.ok) {
           throw new Error()
@@ -24,28 +25,25 @@ class App extends Component {
         return response.json() 
       })
       .then( data => this.setState({ movies: data.movies, loading: false}))
-      .catch( error => this.setState({ error: error.message }))
+      .catch( error => this.setState({ error: error }))
   }
 
   render() {
     return (
       <div>
         <Navbar />
-     
-        {this.state.isLoading && <h2>Page is Loading...</h2>
-          // <img />
-        }
-        {this.state.error && 
-          <h2 className='error-text'>{this.state.error}You didn't break the internet, but we can't find what you are looking for...Please try again later.</h2>}
+        {this.state.isLoading && <h2>Page is Loading...</h2>}
+        {this.state.error && <Route exact path='/error'
+        render={()=> <Error />} />}
         <Route exact path='/'
-          render={() => <MoviesContainer movies={this.state.movies} handleClick={this.handleClick}/> } />
-        <Route exact 
+          render={() => <MoviesContainer movies={this.state.movies} /> } />
+        {!this.state.error && <Route exact 
           path='/:id'
           render={({ match }) => {
             const matchId = match.params.id
             return <IndividualMovie selectedMovie={matchId} />
           }
-        }/>
+        }/>}
       </div>
     )
   }
@@ -54,5 +52,4 @@ class App extends Component {
 
 export default App
 
-//1: this.state.error --> use conditional rendering OR use route paths
-//2: pass the new state down
+
