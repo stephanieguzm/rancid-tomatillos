@@ -79,9 +79,3 @@ describe('As a user, when I click on a movie, I am shown additional details abou
 })
 
 
-
-
-
-
-// - [ ] As a user, I should be taken back to the home page when I click the Home button
-// - [ ] As a user, I should be taken back to the home page when I click the Logo
