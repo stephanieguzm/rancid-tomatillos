@@ -13,17 +13,22 @@ color: white;
 text-align: center;
 }
 
-html {
+/* html {
   background-image: linear-gradient(
     to bottom right,
     rgb(0, 0, 0),
     rgb(0, 0, 0)
     );
     height: 100%;
-  }
-  
-.error-text {
-  color: white;
+} */
+
+
+body {
+  background: url("../../assets/rt-background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .spinner {
@@ -47,13 +52,5 @@ html {
   50% { transform: rotate(720deg) scale(0.6); -webkit-filter: blur(3px); }
   100% { transform: rotate(0deg) scale(1); }
 }
-
-
-
-
-
-
-
-
 
 

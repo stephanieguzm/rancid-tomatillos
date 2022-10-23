@@ -1,7 +1,16 @@
 .individual-movie {
   box-sizing: border-box;
-  border: 3px solid black;
   padding: 10px;
+  display: flex;
+  margin: auto;
+  margin-left: 4em;
+  margin-right: 4em;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(5, 5, 5, 0.33);
+  box-shadow: 0px 4px 15px -4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .individual-movie-img {
@@ -9,7 +18,7 @@
   justify-content: center;
   width: 80%;
   height: auto;
-  margin-left: 10%;
+  border-radius: 10px;
 }
 
 .individual-movie-title {
