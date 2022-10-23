@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import Navbar from '../Navbar/Navbar'
 import IndividualMovie from '../IndividualMovie/IndividualMovie'
@@ -33,21 +33,24 @@ class App extends Component {
   }
 
   render() {
+    console.log('hasError', this.state.hasError)
     return (
       <div>
         <Navbar />
-        {!this.state.movies.length && <h2>Page is Loading...</h2>}
-        {this.state.hasError && <Route exact path='/error'
-        render={()=> <Error />} />}
+       
         <Route exact path='/'
           render={() => <MoviesContainer movies={this.state.movies} /> } />
-        {!this.state.hasError && <Route exact 
+       <Route exact 
           path='/:id'
           render={({ match }) => {
             const matchId = match.params.id
             return <IndividualMovie selectedMovie={matchId} />
           }
-        }/>}
+        }/>
+        {this.state.hasError && <Route exact path='*'
+       render={()=> <Error />} />}
+       {!this.state.movies.length && <p class="spinner"></p>}
+     
       </div>
     )
   }
