@@ -7,7 +7,6 @@ import { useLocation } from 'react-router-dom'
 const Navbar = () => {
   
   const location = useLocation()
-  console.log(location)
   const hasNumber = /\d/
   const isMoviePage = hasNumber.test(location.pathname);  
 
@@ -18,7 +17,7 @@ const Navbar = () => {
       </Link>     
       {isMoviePage && 
         <NavLink to='/'>
-          <button className='home-button'>home</button>
+          <button className='home-button'>Go Home</button>
         </NavLink>
       }
   	</div>

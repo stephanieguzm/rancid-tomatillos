@@ -1,6 +1,4 @@
-* {
-  color: white;
-}
+
 
 .error-container {
 	display: flex;
@@ -14,20 +12,22 @@
 }
 
 .error-text {
-
+	margin: 2px auto;
+	padding: 15px 10px 15px 50px;
+	background-position: 10px center;
+	max-width: 460px;
+	font-family: FontAwesome;
+	font-size: 22px;
+	font-weight: bolder;
+	text-align: center;
 }
 
 .error-image {
 	width: 50%;
   height: auto;
-}
-
-.back-home-button {
-	background-color: red;
-	border: none;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	font-size: 16px;
-	border-radius: 4px;
+	margin: 10px auto;
+	padding: 15px 10px 15px 50px;
+	background-position: 10px center;
+	max-width: 460px;
+	font-size: 24px;
 }
