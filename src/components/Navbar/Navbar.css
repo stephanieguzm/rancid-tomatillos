@@ -1,42 +1,40 @@
 .navBar {
-    display: flex;
-    justify-content: center;
-    margin: 1em;
-    background-color: black;
-  }
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 4em;
+  margin-right: 4em;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .title {
-    display: flex;
-    justify-content: center;
-    color: white;
-  }
+.title {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
 
-  .logo {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    height: auto;
-  }
-
-  a.active {
-    width: auto;
-    height: 20%;
-  }
-
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 400px;
+  height: auto;
+}
 
 .home-button {
-    background-color: red;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 4px;
-    margin-top: 90%;
-  
-  }
+  border-color: black;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #575656a1;
+  background-color: red;
+  color: black;
+  font-size: 1em;
+  padding: 4px 20px;
+  transition-duration: .5s;
+}
 
 .home-button:hover {
-    cursor: pointer;
-    background-color: #f7f7f7;
-  }
+  background-color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: black;
+  cursor: pointer;
+}
