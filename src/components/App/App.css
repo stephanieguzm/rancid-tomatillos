@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -23,6 +24,28 @@ html {
   
 .error-text {
   color: white;
+}
+
+.spinner {
+  margin: 30px;
+  display: block;
+  float: left;
+  border: 25px solid #F07;
+  width: 1px;
+  height: 1px;
+  border-radius: 50px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation-name: spin;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(720deg) scale(0.6); -webkit-filter: blur(3px); }
+  100% { transform: rotate(0deg) scale(1); }
 }
 
 

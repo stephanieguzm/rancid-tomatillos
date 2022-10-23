@@ -8,14 +8,17 @@ beforeEach(() => {
   })
    
   })
+  //if there is no link to the movies, ...isLoading will show up
+  //When the data is recived, all the movie are recieved
+  //however, if there is a 500 status code, the user needs to be routed to the Error page
 
-  it.skip('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
+  it('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
     cy
       .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', 
       {statusCode: 500, body: { message: `Movies cannot load. Please try again.`}} ) 
   })
 
-  it.skip('should display the navbar with the application logo and home button', () => {
+  it('should display the navbar with the application logo and home button', () => {
     cy
       .get('.navBar').should('exist')
       .get('.logo').should('exist')
@@ -33,7 +36,7 @@ beforeEach(() => {
     
   })
 
-  it.skip('should not display details for an individual movie', () => {
+  it('should not display details for an individual movie', () => {
     cy
       .url().should('eq', 'http://localhost:3000/')
       .url().should('not.eq', 'http://localhost:3000/694919')
@@ -42,7 +45,7 @@ beforeEach(() => {
       .get('.individual-movie-img').should('not.exist')
   })
 
-  it.skip('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
+  it('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
     cy.get('.movie-card').first().click()
     .visit('http://localhost:3000/694919').wait(2000)
     .url().should('eq', 'http://localhost:3000/694919')
