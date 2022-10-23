@@ -49,7 +49,7 @@ class App extends Component {
         }/>
         {this.state.hasError && <Route exact path='*'
        render={()=> <Error />} />}
-       {!this.state.movies.length && <p class="spinner"></p>}
+       {!this.state.movies.length && <p className="spinner"></p>}
      
       </div>
     )

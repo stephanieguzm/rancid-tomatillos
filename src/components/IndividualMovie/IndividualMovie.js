@@ -13,7 +13,7 @@ class IndividualMovie extends Component {
   }
   
   componentDidMount() {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movie/${this.props.selectedMovie}`)
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.selectedMovie}`)
     .then( response=> {
       if (!response.ok) {
         throw new Error()

@@ -1,30 +1,43 @@
 describe('As a user, when I load the application, I can see a collection of movies', () => {
 
-beforeEach(() => {
-  cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'allMovies'}).as('movies')
-  cy.visit('http://localhost:3000/')
-  cy.wait('@movies').then(() => {
-    'response.ok'
+  beforeEach(() => {
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'allMovies'}).as('movies')
+    cy.visit('http://localhost:3000/')
+    cy.wait('@movies').then(() => {
+      'response.ok'
+    })
   })
-   
-  })
-  //if there is no link to the movies, ...isLoading will show up
-  //When the data is recived, all the movie are recieved
-  //however, if there is a 500 status code, the user needs to be routed to the Error page
 
   it('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
-    cy
-      .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', 
-      {statusCode: 500, body: { message: `Movies cannot load. Please try again.`}} ) 
-  })
+    cy.intercept(
+      "GET",
+      "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
+      {
+        statusCode: 500,
+        body: {
+          error: "Not Found",
+        },
+      })
+      cy.visit("http://localhost:3000/")
+      cy.get(".error-text").contains(`You didn't break the internet, but we can't find what you are looking for... Please visit our page later.`);
+  });
 
-  it('should display the navbar with the application logo and home button', () => {
+  it.skip('should display the navbar with the application logo and home button', () => {
     cy
       .get('.navBar').should('exist')
       .get('.logo').should('exist')
   })
 
-  it('should display all movies each with a title, movie poster, and rating', () => {
+  it.skip('should display a page loading icon while waiting for movies to display on page', () => {
+    cy
+      .visit('http://localhost:3000/')
+      .get('.spinner').should('exist')
+      .wait('@movies').then(() => {
+        cy.get('.spinner').should('not.exist')
+    })
+  })
+
+  it.skip('should display all movies each with a title, movie poster, and rating', () => {
     cy
       .get('.movie-container').find('.movie-card')
       .get('.movie-card').should('have.length', 5)
@@ -36,7 +49,7 @@ beforeEach(() => {
     
   })
 
-  it('should not display details for an individual movie', () => {
+  it.skip('should not display details for an individual movie', () => {
     cy
       .url().should('eq', 'http://localhost:3000/')
       .url().should('not.eq', 'http://localhost:3000/694919')
@@ -45,14 +58,15 @@ beforeEach(() => {
       .get('.individual-movie-img').should('not.exist')
   })
 
-  it('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
-    cy.get('.movie-card').first().click()
-    .visit('http://localhost:3000/694919').wait(2000)
-    .url().should('eq', 'http://localhost:3000/694919')
-    .go('back')
-    .url().should('eq', 'http://localhost:3000/')
-    .go('forward')
-    .url().should('eq', 'http://localhost:3000/694919')
+  it.skip('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
+    cy
+      .get('.movie-card').first().click()
+      .visit('http://localhost:3000/694919').wait(2000)
+      .url().should('eq', 'http://localhost:3000/694919')
+      .go('back')
+      .url().should('eq', 'http://localhost:3000/')
+      .go('forward')
+      .url().should('eq', 'http://localhost:3000/694919')
   })
   
 })
