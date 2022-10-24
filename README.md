@@ -4,6 +4,9 @@
 For this project, the goal was to create a React application that allows users to browse through a collection of films and see what peaks their interest!  Users can click on a specific film and view a film details.  The user can use the functional back arrow or click the home button to return to the home page.
 
 ## Project Context
+<p align="center">
+<img width='600' alt='Rancid Tomatillo logo' src='https://user-images.githubusercontent.com/102934145/197621931-ded88980-4f88-4bb1-84e4-be58c42da9ac.png'>
+</p>
 We are students in the Front-End Program at [Turing School of Software and Design](https://frontend.turing.edu/). Rancid Tomatillos is our Mod 3 partner project that, which means we have been software developers for just about 5 months! 🙌 
 
 Learning Goals for this project included:      
