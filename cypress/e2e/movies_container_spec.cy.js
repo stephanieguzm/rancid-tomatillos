@@ -22,13 +22,13 @@ describe('As a user, when I load the application, I can see a collection of movi
       cy.get(".error-text").contains(`You didn't break the internet, but we can't find what you are looking for... Please visit our page later.`);
   });
 
-  it.skip('should display the navbar with the application logo and home button', () => {
+  it('should display the navbar with the application logo and home button', () => {
     cy
       .get('.navBar').should('exist')
       .get('.logo').should('exist')
   })
 
-  it.skip('should display a page loading icon while waiting for movies to display on page', () => {
+  it('should display a page loading icon while waiting for movies to display on page', () => {
     cy
       .visit('http://localhost:3000/')
       .get('.spinner').should('exist')
@@ -37,7 +37,7 @@ describe('As a user, when I load the application, I can see a collection of movi
     })
   })
 
-  it.skip('should display all movies each with a title, movie poster, and rating', () => {
+  it('should display all movies each with a title, movie poster, and rating', () => {
     cy
       .get('.movie-container').find('.movie-card')
       .get('.movie-card').should('have.length', 5)
@@ -49,7 +49,7 @@ describe('As a user, when I load the application, I can see a collection of movi
     
   })
 
-  it.skip('should not display details for an individual movie', () => {
+  it('should not display details for an individual movie', () => {
     cy
       .url().should('eq', 'http://localhost:3000/')
       .url().should('not.eq', 'http://localhost:3000/694919')
@@ -58,7 +58,7 @@ describe('As a user, when I load the application, I can see a collection of movi
       .get('.individual-movie-img').should('not.exist')
   })
 
-  it.skip('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
+  it('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
     cy
       .get('.movie-card').first().click()
       .visit('http://localhost:3000/694919').wait(2000)
