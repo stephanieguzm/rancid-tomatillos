@@ -1,19 +1,14 @@
 # Rancid Tomatillos
-Let's get watchin'
-----------
-[Project Board with User Stories] (https://github.com/users/stephanieguzm/projects/2) |
-[Project WireFrame]
-[Component Architecture] (https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg)
 
 ## Overview
-for this project, the goal was to create a React application that allows users to browse through a collection of films and see what peaks their interest!  Users can click on a specific film and view a film details.  The user can use the functional back arrow or click the home button to return to the home page.
+For this project, the goal was to create a React application that allows users to browse through a collection of films and see what peaks their interest!  Users can click on a specific film and view a film details.  The user can use the functional back arrow or click the home button to return to the home page.
 
 ## Project Context
 We are students in the Front-End Program at [Turing School of Software and Design](https://frontend.turing.edu/). Rancid Tomatillos is our Mod 3 partner project that, which means we have been software developers for just about 5 months! 🙌 
 
 Learning Goals for this project included:      
 ✔️ Gain competency with React fundamentals      
-✔️ Learn how to test React components & asynchronous JS using Cypress
+✔️ Learn how to test React components using Cypress
 ✔️ Refactor conditional rendering to create a multi page UX React Router 
 
 [Link to Project Description](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
@@ -50,21 +45,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 - Fetch API
 
 ## Future Features
-- Add search bar or dropdown to have ability to search a movie by its Title
-- Allow a user to search movies by genres on the main page 
-- Ability for a user to add their own rating to a movie
-- Responsive design to allow for better UX/UI on mobile devices
+- [x] Add a search bar or dropdown menu for users to have the ability to search a movie by its title
+- [x] Allow a user to search movies by genres on the main page 
+- [x] Ability for a user to add their own rating to a movie
+- [x] Responsive design to allow for better UX/UI on mobile devices
 
 ## Dev Notes
 ### Wins
-- Fully functional, interactive page
-- Excellent group dynamic and communication
-- Smooth git workflow
+- [x] Excellent group dynamic and communication
+- [x] Smooth git workflow
 
 ### Challenges
--
--
--
+- [x] Understanding React Router
 
 ## Dev Contacts
 Morgan Berry |
@@ -77,9 +69,13 @@ sguzman247@gmail.com |
 [Github](https://github.com/stephanieguzm) |
 [LinkedIn](https://www.linkedin.com/in/stephanie-guzman-sdsw/) |
 
-## Acknowledgments
+## Acknowledgments 
+[Project Board with User Stories] (https://github.com/users/stephanieguzm/projects/2)
+[Component Architecture] (https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg) 
 [youtube-shield]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white
 [![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
+[Project Board with User Stories] (https://github.com/users/stephanieguzm/projects/2) 
+
 
 
 
