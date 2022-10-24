@@ -45,8 +45,7 @@ describe('As a user, when I load the application, I can see a collection of movi
       .get('.titles').should('be.visible').should('have.length', 5)
       .get('.rating-container').should('exist')
       .get('.tomatillo-image').should('be.visible')
-      .get('.ratings').should('have.length', 5)
-    
+      .get('.ratings').should('have.length', 5) 
   })
 
   it('should not display details for an individual movie', () => {
