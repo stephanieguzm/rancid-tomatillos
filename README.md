@@ -10,7 +10,7 @@ We are Mod 3 students in the Front-End Program at [Turing School of Software and
 
 Learning Goals for this project included:      
 ✔️ Gain competency with React fundamentals      
-✔️ Learn how to test React components & asynchronous JS using Cypress
+✔️ Learn how to test React components & asynchronous JS using Cypress <br>
 ✔️ Create a multi page UX using React Router 
 
 [Link to Project Description](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
@@ -67,12 +67,12 @@ sguzman247@gmail.com |
 [LinkedIn](https://www.linkedin.com/in/stephanie-guzman-sdsw/) |
 
 ## Project Planning 
-[Project Board with User Stories] (https://github.com/users/stephanieguzm/projects/2)
-[Component Architecture] (https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg) 
-[Project Board with User Stories] (https://github.com/users/stephanieguzm/projects/2) 
+[Project Board with User Stories](https://github.com/users/stephanieguzm/projects/2)
+[Component Architecture](https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg) 
+[Project Board with User Stories](https://github.com/users/stephanieguzm/projects/2) 
 
 ## Acknowledgments 
-- [youtube-shield]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white
+- [youtube-shield](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
 - [![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
 - 2207 Turing cohort
 - Miwha Geschwind
