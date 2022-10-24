@@ -72,14 +72,10 @@ sguzman247@gmail.com |
 [Project Board with User Stories](https://github.com/users/stephanieguzm/projects/2) 
 
 ## Acknowledgments 
-- [youtube-shield](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
-- [![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
 - 2207 Turing cohort
 - Miwha Geschwind
 - Dylan Duke
 - Elle Li
-
-
 
 
 
