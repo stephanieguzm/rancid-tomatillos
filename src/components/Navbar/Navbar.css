@@ -4,6 +4,7 @@
   margin-top: 10px;
   margin-left: 4em;
   margin-right: 4em;
+  margin-bottom: 4em;
   justify-content: space-between;
   align-items: center;
 }
@@ -25,7 +26,8 @@
   border-color: black;
   border-radius: 5px;
   box-shadow: 3px 3px 3px #575656a1;
-  background-color: red;
+  background-color: rgba(243, 21, 21, 0.934);
+  margin-right: 2em;
   color: black;
   font-size: 1em;
   padding: 4px 20px;

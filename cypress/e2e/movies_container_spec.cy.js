@@ -17,9 +17,10 @@ describe('As a user, when I load the application, I can see a collection of movi
         body: {
           error: "Not Found",
         },
-      })
-      cy.visit("http://localhost:3000/")
-      cy.get(".error-text").contains(`You didn't break the internet, but we can't find what you are looking for... Please visit our page later.`);
+      }
+    )
+    cy.visit("http://localhost:3000/")
+    cy.get(".error-text").contains(`You didn't break the internet, but we can't find what you are looking for... Please visit our page later.`);
   });
 
   it('should display the navbar with the application logo and home button', () => {
@@ -45,8 +46,7 @@ describe('As a user, when I load the application, I can see a collection of movi
       .get('.titles').should('be.visible').should('have.length', 5)
       .get('.rating-container').should('exist')
       .get('.tomatillo-image').should('be.visible')
-      .get('.ratings').should('have.length', 5)
-    
+      .get('.ratings').should('have.length', 5) 
   })
 
   it('should not display details for an individual movie', () => {
@@ -67,8 +67,7 @@ describe('As a user, when I load the application, I can see a collection of movi
       .url().should('eq', 'http://localhost:3000/')
       .go('forward')
       .url().should('eq', 'http://localhost:3000/694919')
-  })
-  
+  }) 
 })
 
 

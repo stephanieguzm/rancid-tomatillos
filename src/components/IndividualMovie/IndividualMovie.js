@@ -34,11 +34,13 @@ class IndividualMovie extends Component {
     
     return (
       <section className='individual-movie' id={movie.id}>
-      <h1 className='individual-movie-title'>{movie.title}</h1>
-      <p className='individual-movie-text'>{movie.tagline}</p>
       <img className='individual-movie-img' alt={movie.title} src={movie.backdrop_path}/>
+      <div className='movie-details'>
+      <h1 className='individual-movie-title'>{movie.title}</h1>
+      <p className='individual-movie-text movie-tagLine'>{movie.tagline}</p>
       <p className='individual-movie-text'>{movie.overview}</p> 
       <p className='individual-movie-text'>{genres}  |  {movie.runtime} minutes  |  {year} </p>
+      </div>
       </section>
     )
   }
