@@ -57,7 +57,7 @@ Learning Goals for this project included:
 - [x] Understanding React Router
 - [x] Learning Cypress syntax
 
-## Dev Contacts
+## Developed by:
 Morgan Berry |
 Morganlyn.berry@gmail.com |
 [Github](https://github.com/Mlberry0205) |
@@ -78,6 +78,7 @@ sguzman247@gmail.com |
 - Miwha Geschwind
 - Dylan Duke
 - Elle Li
+- Jordan Sullivan
 
 
 
