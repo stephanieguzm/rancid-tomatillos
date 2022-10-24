@@ -32,10 +32,12 @@ body {
 }
 
 .spinner {
-  margin: 30px;
+  margin: auto;
+  margin-left: 6em;
+  margin-right: 6em;
   display: block;
   float: left;
-  border: 25px solid #F07;
+  border: 25px solid red;
   width: 1px;
   height: 1px;
   border-radius: 50px;

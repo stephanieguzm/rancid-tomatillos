@@ -1,5 +1,6 @@
 import React from 'react'
 import MovieCard from '../MovieCard/MovieCard'
+import Error from '../Error/Error'
 import './MoviesContainer.css'
 
 const MoviesContainer = (props) => {
@@ -15,11 +16,19 @@ const MoviesContainer = (props) => {
 		)
 	})
 
+	const displayAllMovies = () => {
+		return (
+			<div className='movie-container'>
+				{movieCards}
+			</div>
+		)
+	}
+	
 	return (
-		<div className='movie-container'>
-			{movieCards}
-		</div>
-	)
+		<section> 
+			{props.error ? <Error /> : <>{displayAllMovies()}</>}
+		</section>
+		)
 }
 
 export default MoviesContainer

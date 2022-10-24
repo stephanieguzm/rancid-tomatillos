@@ -7,13 +7,13 @@ describe('As a user, when I click on a movie, I am shown additional details abou
     cy.visit('http://localhost:3000/').wait(2000)
   })
 
-  it.skip('should display an error message (500 status code) if the individual movie is unable to render', () => {
+  it('should display an error message (500 status code) if the individual movie is unable to render', () => {
     cy
       .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/581392', 
       {statusCode: 500, body: {message: `Movies cannot load. Please try again.` }})
   })
 
-  it.skip('should render all the details about the movie they clicked on', () => {
+  it('should render all the details about the movie they clicked on', () => {
     cy
       .get('.movie-card').first().click()
       .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919', {
