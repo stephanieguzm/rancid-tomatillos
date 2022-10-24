@@ -15,9 +15,10 @@ Learning Goals for this project included:
 
 [Link to Project Description](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
 
-## Setup
-### Frontend Setup
+## Demo
+![Rancid-GIF](https://user-images.githubusercontent.com/102934145/197630398-8886b036-35c8-4702-9972-b2617900b4d5.gif)
 
+## Setup
 1. From your terminal, `cd` back to your parent directory
 2. Clone down this repository:
   ```
