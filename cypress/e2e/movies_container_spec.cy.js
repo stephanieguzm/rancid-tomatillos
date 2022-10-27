@@ -61,7 +61,7 @@ describe('As a user, when I load the application, I can see a collection of movi
   it('Should be able to use the browser arrow buttons to go between the main page and individual movie page', () => {
     cy
       .get('.movie-card').first().click()
-      .visit('http://localhost:3000/694919').wait(2000)
+      .visit('http://localhost:3000/694919')
       .url().should('eq', 'http://localhost:3000/694919')
       .go('back')
       .url().should('eq', 'http://localhost:3000/')

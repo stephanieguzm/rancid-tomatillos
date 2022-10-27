@@ -7,7 +7,7 @@ describe('As a user, when I click on a movie, I am shown additional details abou
     .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/581392', {
       fixture: 'movie2.json'
     }).as('movie2')
-    cy.visit('http://localhost:3000/').wait(2000)
+    cy.visit('http://localhost:3000/')
   })
 
   it('should display an error message (500 status code) if a movies details are unable to be displayed on the screen', () => {

@@ -70,6 +70,14 @@ sguzman247@gmail.com |
 [Github](https://github.com/stephanieguzm) |
 [LinkedIn](https://www.linkedin.com/in/stephanie-guzman-sdsw/) |
 
+
+## Acknowledgments &
+[Project Board with User Stories](https://github.com/users/stephanieguzm/projects/2) |
+[Component Architecture](https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg) |
+[Project Board with User Stories](https://github.com/users/stephanieguzm/projects/2) |
+[youtube-shield](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white) |
+[![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
+
 ## Project Planning 
 [Project Board with User Stories](https://github.com/users/stephanieguzm/projects/2) <br>
 [Component Architecture](https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg) <br>

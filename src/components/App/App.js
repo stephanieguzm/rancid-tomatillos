@@ -51,7 +51,7 @@ class App extends Component {
           }
         } />
         {/* {this.state.hasError && <Error />}  */}
-        {!this.state.movies.length && !this.state.hasError ? <p className="spinner"></p> : <></>}
+        {!this.state.movies.length && !this.state.hasError && <p className="spinner"></p>}
       </div>
     )
   }
