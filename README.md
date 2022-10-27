@@ -1,6 +1,9 @@
 # Rancid Tomatillos
 
 ## Overview
+<p align="center">
+<img width='600' alt='Rancid Tomatillo logo' src='https://user-images.githubusercontent.com/102934145/197621931-ded88980-4f88-4bb1-84e4-be58c42da9ac.png'>
+</p>
 For this project, the goal was to create a React application that allows users to browse through a collection of films and see what peaks their interest!  Users can click on a specific film and view a film details.  The user can use the functional back arrow or click the home button to return to the home page.
 
 ## Project Context
@@ -69,12 +72,13 @@ sguzman247@gmail.com |
 [Github](https://github.com/stephanieguzm) |
 [LinkedIn](https://www.linkedin.com/in/stephanie-guzman-sdsw/) |
 
-## Acknowledgments 
-[Project Board with User Stories] (https://github.com/users/stephanieguzm/projects/2)
-[Component Architecture] (https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg) 
-[youtube-shield]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white
+## Acknowledgments &
+[Project Board with User Stories](https://github.com/users/stephanieguzm/projects/2) |
+[Component Architecture](https://excalidraw.com/#json=gMohsSoc8PtHXaYrIagxB,sb-h9i_eIiau7aoGAmxyqg) |
+[Project Board with User Stories](https://github.com/users/stephanieguzm/projects/2) |
+[youtube-shield](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white) |
 [![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
-[Project Board with User Stories] (https://github.com/users/stephanieguzm/projects/2) 
+
 
 
 
